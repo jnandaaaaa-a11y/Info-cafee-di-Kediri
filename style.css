@@ -1,0 +1,134 @@
+/* --- Reset Dasar --- */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fdfcf7; /* Warna krem muda */
+    color: #333;
+}
+
+/* --- Utilitas --- */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header & Navigasi --- */
+header {
+    background-color: #4a3f35; /* Cokelat tua */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-family: 'Georgia', serif;
+}
+
+header nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+header nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- Sections --- */
+section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4a3f35;
+}
+
+/* --- Hero Section --- */
+#hero {
+    background: #f4f1ea;
+    padding: 60px 0;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- Menu Section --- */
+#menu .menu-category {
+    margin-bottom: 30px;
+}
+
+#menu h3 {
+    font-size: 1.5rem;
+    color: #8b7355; /* Cokelat sedang */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e0d9cd;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#menu .price {
+    font-weight: bold;
+    color: #4a3f35;
+    margin-left: 10px;
+}
+
+/* --- Kontak Section --- */
+#kontak {
+    background-color: #f4f1ea;
+}
+
+#kontak p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #4a3f35;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
