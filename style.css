@@ -1,134 +1,183 @@
-/* --- Reset Dasar --- */
-body, h1, h2, h3, p, ul {
+/* style.css */
+
+/* --- Variabel Warna --- */
+:root {
+    --warna-primer: #ff69b4; /* Pink Cerah */
+    --warna-sekunder: #ffc0cb; /* Pink Muda */
+    --warna-aksen: #8a2be2; /* Biru Ungu (Aksen Kontras) */
+    --warna-latar-belakang: #fffafa; /* Putih Salju */
+    --warna-teks-gelap: #333;
+    --warna-teks-terang: #fff;
+}
+
+/* --- Gaya Dasar (Body) --- */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--warna-latar-belakang);
+    color: var(--warna-teks-gelap);
     line-height: 1.6;
-    background-color: #fdfcf7; /* Warna krem muda */
-    color: #333;
 }
 
-/* --- Utilitas --- */
 .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--warna-teks-terang);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Header & Navigasi --- */
+/* --- Header --- */
 header {
-    background-color: #4a3f35; /* Cokelat tua */
-    color: #fff;
-    padding: 20px 0;
+    background-color: var(--warna-primer);
+    color: var(--warna-teks-terang);
+    padding: 40px 0;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2.5rem;
-    font-family: 'Georgia', serif;
+    margin-bottom: 5px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-header nav ul {
-    list-style: none;
-    margin-top: 10px;
+header p {
+    font-size: 1.1em;
+    font-style: italic;
 }
 
-header nav li {
-    display: inline;
-    margin: 0 15px;
-}
-
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-header nav a:hover {
-    text-decoration: underline;
-}
-
-/* --- Sections --- */
-section {
-    padding: 40px 0;
+/* --- Navigasi --- */
+nav {
+    background-color: var(--warna-sekunder);
+    padding: 15px 0;
     text-align: center;
+    border-bottom: 2px solid var(--warna-primer);
 }
 
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #4a3f35;
+nav a {
+    color: var(--warna-teks-gelap);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
 }
 
-/* --- Hero Section --- */
-#hero {
-    background: #f4f1ea;
-    padding: 60px 0;
+nav a:hover {
+    background-color: var(--warna-aksen);
+    color: var(--warna-teks-terang);
 }
 
-#hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-#hero img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* --- Menu Section --- */
-#menu .menu-category {
-    margin-bottom: 30px;
-}
-
-#menu h3 {
-    font-size: 1.5rem;
-    color: #8b7355; /* Cokelat sedang */
-    margin-bottom: 10px;
-    border-bottom: 2px solid #e0d9cd;
+/* --- Bagian Produk --- */
+h2 {
+    text-align: center;
+    color: var(--warna-primer);
+    margin-bottom: 40px;
+    border-bottom: 3px solid var(--warna-sekunder);
     display: inline-block;
     padding-bottom: 5px;
+    width: 100%;
 }
 
-#menu ul {
-    list-style: none;
+.produk-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
-#menu li {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+.produk-item {
+    background-color: var(--warna-teks-terang);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
 }
 
-#menu .price {
+.produk-item:hover {
+    transform: translateY(-5px); /* Efek mengangkat saat di-hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.produk-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.produk-item h3 {
+    color: var(--warna-aksen);
+    margin-top: 0;
+}
+
+.produk-item strong {
+    color: var(--warna-primer);
+    font-size: 1.2em;
+    display: block;
+    margin: 10px 0;
+}
+
+button {
+    background-color: var(--warna-aksen);
+    color: var(--warna-teks-terang);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
     font-weight: bold;
-    color: #4a3f35;
-    margin-left: 10px;
+    transition: background-color 0.3s;
 }
 
-/* --- Kontak Section --- */
-#kontak {
-    background-color: #f4f1ea;
-}
-
-#kontak p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+button:hover {
+    background-color: #6a0dad; /* Sedikit lebih gelap */
 }
 
 /* --- Footer --- */
 footer {
-    background-color: #4a3f35;
-    color: #fff;
+    background-color: var(--warna-teks-gelap);
+    color: var(--warna-teks-terang);
     text-align: center;
     padding: 20px 0;
-    margin-top: 30px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* --- Media Queries (Responsif) --- */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .produk-list {
+        gap: 20px;
+    }
+    
+    .produk-item {
+        width: 100%; /* Membuat item produk mengisi lebar penuh pada layar kecil */
+    }
 }
