@@ -3,220 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kafe Koding - Tempat Ngopi Santai</title>
+    <title>Manis Bakery - Toko Kue Terbaik Anda</title>
     <style>
-        /* --- Reset Dasar --- */
-        body, h1, h2, h3, p, ul {
+        /* Gaya dasar untuk tampilan yang lebih baik tanpa file CSS eksternal */
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #fdfcf7; /* Warna krem muda */
+            background-color: #f8f8f8;
             color: #333;
         }
-
-        /* --- Utilitas --- */
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* --- Header & Navigasi --- */
         header {
-            background-color: #4a3f35; /* Cokelat tua */
-            color: #fff;
+            background-color: #ffb6c1; /* Warna pink lembut */
+            color: white;
             padding: 20px 0;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
-
-        header h1 {
-            font-size: 2.5rem;
-            font-family: 'Georgia', serif;
-        }
-
-        header nav ul {
-            list-style: none;
-            margin-top: 10px;
-        }
-
-        header nav li {
-            display: inline;
+        nav a {
+            color: white;
             margin: 0 15px;
-        }
-
-        header nav a {
-            color: #fff;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1rem;
         }
-
-        header nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- Sections --- */
-        section {
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #4a3f35;
-        }
-
-        /* --- Hero Section --- */
-        #hero {
-            background: #f4f1ea;
-            padding: 60px 0;
-        }
-
-        #hero p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        #hero img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        /* --- Menu Section --- */
-        #menu .menu-category {
-            margin-bottom: 30px;
-        }
-
-        #menu h3 {
-            font-size: 1.5rem;
-            color: #8b7355; /* Cokelat sedang */
-            margin-bottom: 10px;
-            border-bottom: 2px solid #e0d9cd;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        #menu ul {
-            list-style: none;
-        }
-
-        #menu li {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-
-        #menu .price {
-            font-weight: bold;
-            color: #4a3f35;
-            margin-left: 10px;
-        }
-
-        /* --- Kontak Section --- */
-        #kontak {
-            background-color: #f4f1ea;
-        }
-
-        #kontak p {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-
-        /* --- Footer --- */
-        footer {
-            background-color: #4a3f35;
-            color: #fff;
-            text-align: center;
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
             padding: 20px 0;
-            margin-top: 30px;
         }
-
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .product h3 {
+            color: #d2691e; /* Warna cokelat/krem */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <h1>Kafe Koding</h1>
-            <nav>
-                <ul>
-                    <li><a href="#hero">Beranda</a></li>
-                    <li><a href="#tentang">Tentang</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#kontak">Kontak</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Manis Bakery 🎂</h1>
+        <p>Cita Rasa Manis di Setiap Gigitan</p>
+        <nav>
+            <a href="#home">Beranda</a>
+            <a href="#products">Menu Kue</a>
+            <a href="#contact">Hubungi Kami</a>
+            <a href="#">Keranjang (0)</a>
+        </nav>
     </header>
-
-    <main>
-        <section id="hero" class="container">
-            <h2>Selamat Datang</h2>
-            <p>Tempat terbaik untuk bersantai, bekerja, dan menikmati secangkir kopi pilihan.</p>
-            [attachment_0](attachment)
+    
+    <div class="container">
+        
+        <section id="home">
+            <h2>Selamat Datang di Toko Kue Kami!</h2>
+            <p>Kami menyajikan kue-kue segar dan lezat yang dibuat dengan bahan-bahan terbaik. Pesan sekarang dan rasakan kebahagiaannya!</p>
+            <p><a href="#products" style="color: #ffb6c1; font-weight: bold;">Lihat Menu Spesial Kami</a></p>
         </section>
 
-        <section id="tentang" class="container">
-            <h2>Tentang Kami</h2>
-            <p>
-                Kafe Koding didirikan pada tahun 2024 dengan mimpi sederhana: 
-                menciptakan ruang di mana kopi berkualitas bertemu dengan suasana yang nyaman. 
-                Kami percaya setiap cangkir kopi memiliki cerita, dan kami di sini untuk menceritakannya kepada Anda.
-            </p>
-        </section>
+        <hr>
 
-        <section id="menu" class="container">
-            <h2>Menu Andalan Kami</h2>
-
-            <div class="menu-category">
-                <h3>Signature Coffee</h3>
-                <ul>
-                    <li>Kopi Susu Gula Aren <span class="price">Rp 18.000</span></li>
-                    <li>V60 Manual Brew <span class="price">Rp 25.000</span></li>
-                    <li>Caramel Macchiato <span class="price">Rp 22.000</span></li>
-                </ul>
+        <section id="products">
+            <h2>Menu Kue Populer</h2>
+            
+            <div class="product">
+                <h3>Red Velvet Cake</h3>
+                
+                <p>Kue beludru merah klasik dengan lapisan *cream cheese* frosting yang lembut.</p>
+                <p><strong>Harga: Rp 250.000</strong></p>
+                <button>Tambah ke Keranjang</button>
             </div>
 
-            <div class="menu-category">
-                <h3>Makanan Ringan</h3>
-                <ul>
-                    <li>Croissant Cokelat <span class="price">Rp 15.000</span></li>
-                    <li>Kentang Goreng Truffle <span class="price">Rp 20.000</span></li>
-                    <li>Singkong Goreng Keju <span class="price">Rp 17.000</span></li>
-                </ul>
+            <div class="product">
+                <h3>Chocolate Fudge Brownies</h3>
+                
+                <p>Brownies cokelat padat dan *fudgy*, sangat cocok untuk pecinta cokelat.</p>
+                <p><strong>Harga: Rp 15.000 / pcs</strong></p>
+                <button>Tambah ke Keranjang</button>
             </div>
+
+            <div class="product">
+                <h3>Croissant Almond</h3>
+                
+                <p>Pastry berlapis renyah dengan isian dan taburan kacang almond.</p>
+                <p><strong>Harga: Rp 25.000</strong></p>
+                <button>Tambah ke Keranjang</button>
+            </div>
+            
         </section>
 
-        <section id="kontak" class="container">
-            <h2>Kunjungi Kami</h2>
-            <p>
-                <strong>Alamat:</strong><br>
-                Jl. Web Developer No. 123, Jakarta, Indonesia
-            </p>
-            <p>
-                <strong>Jam Buka:</strong><br>
-                Senin - Minggu: 08:00 - 22:00
-            </p>
-            <p>
-                <strong>Telepon:</strong> (021) 123-4567
-            </p>
+        <hr>
+
+        <section id="contact">
+            <h2>Hubungi Kami</h2>
+            <p>Pesan custom atau tanyakan tentang ketersediaan:</p>
+            <ul>
+                <li><strong>Telepon:</strong> 0812-3456-7890</li>
+                <li><strong>Email:</strong> info@manisbakery.com</li>
+                <li><strong>Alamat:</strong> Jl. Rasa Manis No. 10, Kota Lezat</li>
+            </ul>
+
+            <form action="#" method="post">
+                <label for="name">Nama:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="message">Pesan:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                
+                <input type="submit" value="Kirim Pesan">
+            </form>
         </section>
 
-    </main>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Kafe Koding. Dibuat dengan ❤️ dan HTML.</p>
-        </div>
+        <p>&copy; 2025 Manis Bakery. Semua Hak Cipta Dilindungi.</p>
     </footer>
 
 </body>
